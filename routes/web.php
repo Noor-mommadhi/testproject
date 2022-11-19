@@ -103,3 +103,11 @@ Route::get('shipping',[Billingcontroller::class,'display']);
 Route::get('paybill',[Billingcontroller::class,'paybill']);
 Route::post('make',[Billingcontroller::class,'ins'])->name('makepay');
 Route::get('payview',[Billingcontroller::class,'view']);
+
+Route::get('init', function(){
+    return response()->json([
+        'success' => true,
+        'message' => 'Updated Successfully',
+        'code' => 200
+    ]);
+});
